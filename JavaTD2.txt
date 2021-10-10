@@ -1,0 +1,57 @@
+TD02
+Exercice 01: 
+1) affichage : 
+42 // mere est de type Mere, elle fait appel à sa propre méthode meth
+42 // mere est de type Mere, elle fait appel à sa propre méthode printMeth
+24 // fille est de type Fille, elle fait appel à sa propre méthode meth
+24 // la classe Fille ne possede pas de méthode printMere mais sa classe mère si, elle fait appel à la méthode printMeth de sa classe mere qui elle fait appel à meth de la fille car elle posséde sa propre version de cette méthode.
+24 // Bien que mereFille est déclaré comme objet Mere, mais elle est créée avec le constructeur de Fille, le compilateur la considere comme objet de type Fille et fait appel à sa méthode Meth
+24 // la classe Fille ne possede pas de méthode printMere mais sa classe mère si, elle fait appel à la méthode printMeth de sa classe mere qui elle fait appel à meth de la fille car elle posséde sa propre version de cette méthode.
+
+2) Il accéde à toutes les méthodes meth() par héritage.
+
+3) 
+
+4) Si meth sont des champs il faudra créer des getter pour pouvoir y accéder.
+
+Exercice 2 : 
+1 - La methode e() de la classe Mere est protected alors que la methode e() de la classe Fille
+    est private et on peut pas reduire la visibilité d'une methode herité
+    
+    La methode k() de Mere a une IOException alors que la methode k() a une Exception qui n'est 
+    pas compatible avec IOException.
+
+    
+    Les definitions des methodes i() et k() de la classe Mere ne sont pas compatibles avec celles 
+    de la classe herité Fille.
+    
+    'The method miage() is undefined for the type Mere', l'objet mere de type Mere n'a pas de
+    methode miage().
+
+3) une surcharge : on garde le meme nom de la méthode et on change le type et/ou le nombre d'arguments.
+   une redéfintion : on garde la meme signature de la méthode et on change son corps.
+
+4 - Miage : on appel la methode miage() de la classe Fille
+    Miage : on a acces à la methode miage() grace au cast '(Fille)'
+    Mere_a : on appel la methode a() de la classe Mere
+    Fille_a : On a acces à la methode a() de la classe Fille parce qu'elle est aussi defini dans
+              la classe Mere.
+    Fille_a : on appel la methode a() de la classe Fille
+    Fille_a : Comme mereFille.a()
+    Fille_b(Fille) : On appel la methode b() de la classe Fille parce qu'elle est aussi defini
+                     dans la classe Mere est new.
+    Mere_c : on appel la methode merreFille.c(void) de la classe Mere. 
+    Fille_c(Mere) : On appel la methode c(mere) de la classe Fille
+    Fille_c(Mere) : On appel la methode c(mere) de la classe Fille
+    Fille_c(Mere) : On appel la methode c(mere) de la classe Fille
+    Fille_c(Fille) : On appel la methode c(fille) de la classe Fille
+    static Mere_d : On appel la methode static d() de la classe Mere
+    static Mere_d : On appel la methode static d() de la classe Mere donc on a pas acces a la
+                    methode d() de la classe Fille
+    Mere_f : On appel la fonction f() de la classe Mere
+    Mere_f : On appel la fonction f() de la classe Mere
+    Fille_j : On a acces à la fonction j() de la classe Fille parce qu'elle est présente dans
+              les deux classes Mere et Fille et l'objet mereFille est de type new Fille()
+    Mere_k : il existe une seule methode k() qui est dans Mere.
+    Fille_l : comme fille_j
+    Fille_m : comme fille_j
