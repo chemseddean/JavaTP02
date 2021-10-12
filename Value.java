@@ -1,8 +1,12 @@
 
-public class Value extends Expr{
+public class Value implements Expr{
+	private double d; 
 	public Value(double d) {
-		super(d);
+		this.d = d;
 	}
-	
-	
+
+	public double eval() {
+		// TODO Auto-generated method stub
+		return d;
+	}
 }

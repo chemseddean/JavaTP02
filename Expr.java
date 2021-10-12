@@ -1,20 +1,8 @@
 
-public class Expr {
-	private double value; 
-	public Expr() {
-		
-	}
-	public Expr(double v) {
-		value = v; 
-	}
-	public double eval() {
-		// TODO Auto-generated method stub
-		return value;
-	}
+public interface Expr {
+	double eval();
 	
-	public String toString() {
-		return ""+value+"";
-	}
+	String toString();
 	
 	
 }

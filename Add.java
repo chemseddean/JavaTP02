@@ -1,4 +1,4 @@
-public class Add extends Expr {
+public class Add implements Expr {
 	private Value value;
 	private Expr val;
 	public Add(Value value, Expr val) {
